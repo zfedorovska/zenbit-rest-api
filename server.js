@@ -4,6 +4,7 @@ const { errorHandler } = require('./helpers/apiHelpers');
 
 app.use(errorHandler);
 
-app.listen(3000, function () {
-  console.log('Server running. Use our API on port: 3000');
+const PORT = process.env.port;
+app.listen(PORT, function () {
+  console.log(`Server running. Use our API on port: ${PORT}`);
 });
